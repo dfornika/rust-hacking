@@ -1,0 +1,9 @@
+[package]
+name = "mlst"
+version = "0.1.0"
+authors = ["Dan Fornika <dfornika@gmail.com>"]
+
+[dependencies]
+clap = { version = "2.26.0", features = ["yaml"] }
+bio = "0.14.1"
+flate2 = { version = "0.2", features = ["zlib"], default-features = false }

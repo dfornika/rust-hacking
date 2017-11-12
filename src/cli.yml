@@ -1,0 +1,56 @@
+name: mlst
+version: "0.1.0"
+author: Dan Fornika <dfornika@gmail.com>
+about: MLST
+args:
+subcommands:
+  - build:
+      about: ""
+      version: "0.1.0"
+      author: Dan Fornika <dfornika@gmail.com>
+      args:
+        - output:
+            short: d
+            long: db
+            takes_value: true
+            required: true
+        - kmer_size:
+            short: k
+            long: kmer
+            takes_value: true
+            required: true
+        - fasta_files:
+            short: f
+            long: fasta_files
+            takes_value: true
+            required: true
+            multiple: true
+        - profile:
+            short: p
+            long: profile
+            takes_value: true
+  - call:
+      about: ""
+      version: "0.1.0"
+      author: Dan Fornika <dfornika@gmail.com>
+      args:
+        - output:
+            short: o
+            long: output
+            takes_value: true
+            required: true
+        - sample_name:
+            short: s
+            long: sample_id
+            takes_value: true
+            required: true
+        - database:
+            short: d
+            long: db
+            takes_value: true
+            required: true
+        - input_files:
+            index: 1
+            takes_value: true
+            required: true
+            multiple: true
